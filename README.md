@@ -4,7 +4,9 @@ A simple Python script to rename the current GNOME Workspace.
 <div align="center">
 <img src="assets/workspace-bar.png">
 <br>View of <a href="https://extensions.gnome.org/extension/3851/workspaces-bar/">Workspace Bar</a> GNOME Extension
+</div>
 
+<div align="center">
 <img src="assets/zenity.png">
 <br>Zenity dialog asking for new label
 </div>
