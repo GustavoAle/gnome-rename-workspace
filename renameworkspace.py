@@ -9,7 +9,14 @@ current_workspace = int(os.popen("xdotool get_desktop").read())
 
 # Create an python array from x
 workspaces = x[1:-2].replace("'","").split(", ")
-current_name = workspaces[current_workspace]
+
+# Ensure the list contains up to current_workspace index
+if(len(workspaces) >= (current_workspace+1)):
+    current_name = workspaces[current_workspace]
+else:
+    current_name = ''
+    workspaces.extend(['']*(1+current_workspace-len(workspaces)))
+
 
 # Ask for new label
 new_name = os.popen(f"zenity --entry --entry-text='{current_name}' --title='Workspace label' --text='New label'").read()
